@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative './char_counter.rb'
+require_relative '../lib/char_counter.rb'
 
 describe 'CharCounter' do
  
@@ -12,7 +12,7 @@ describe 'CharCounter' do
     dic = CharCounter.count('a')
     dic['b'].should be nil
   end 
- 
+
   it 'should return {a=>2,t=>1,d=>1,0=>1 } when string is atado' do
     dic = CharCounter.count('atado')
     dic['a'].should be 2
@@ -30,6 +30,5 @@ describe 'CharCounter' do
   it 'should return {} when string is nil' do
     dic = CharCounter.count(nil)
     dic.size.should be 0
-  end   
-
+  end
 end
